@@ -1,3 +1,8 @@
+/*********************************************
+ * Script to reveal ads as they render and remove empty ads (doubleclick delivers a 1x1 gif for empty ads)
+ * 
+ *********************************************/
+
 jQuery(function($) {
   $(window).load(function() {
     $('.block-pm_doubleclick').each(function() {
@@ -6,10 +11,6 @@ jQuery(function($) {
     });
 
     $('.ad1:has(img[src$="-grey.gif"])').addClass('ad-off'); // removes empty ads (accounts for ads using pixel tracking)
-
-    /* the below code removes ads for bad sitenames, however, it also collapses
-    text ads. We should probably trust good sitename more than text ads. 
-    $('.adnull').addClass('ad-off'); 
 
     /*
     * Check to see if the article 180 ad is empty AND there is no other visible
@@ -22,11 +23,10 @@ jQuery(function($) {
 });
 
 /*********************************************
- * Helper scripts for the display of a 
- * roadblock advertisement.
+ * scripts for the display of a interstitial
+ * advertisement (errantly referred to as roadblock)
  *********************************************/
 (function(jQuery) {
-//Attach this new method to jQuery
   jQuery.fn.extend({ 
   //This is where you write your plugin's name
     ShowRoadblockAd: function(options) {
@@ -135,7 +135,6 @@ jQuery(function($) {
   });
   //This is a plugin to refresh doubleclick ad that appear in an IFrame (ex Gallery).
   jQuery.fn.extend({
-    //This is where you write your plugin's name
     pm_doubleclick_refreshIframes: function() {
       // loop through each iFrame every time you click on a link and set the source of the iFrame to itself.
       var $ord = Math.floor(Math.random() * 10000000);

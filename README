@@ -1,0 +1,9 @@
+The name of the repository says it all.
+
+The files in this repository do not necessarily go together. They are intended to show snippets of
+the use of HTML, css and JavaScript.
+
+One exception to that is the partnership between branding.css.less and subtheme-vars.css.less.
+subtheme-vars.css.less simply sets the branding colors, header treatments etc to be utilized by
+branding.css.less which sits on the main theme. This allows us to add/edit css to branding.css.less
+and affect all our sites in one change.

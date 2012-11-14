@@ -1,0 +1,330 @@
+@arial: Arial,"Helvetica Neue",Helvetica,sans-serif;
+@lucida: "Lucida Grande","Lucida Sans Unicode","Lucida Sans","URW Gothic L",Verdana,sans-serif;
+@georgia: Georgia,Times,"Times New Roman",serif;
+@franklin: "Franklin Gothic Medium", "Arial Narrow Bold", Arial, sans-serif;
+@trebuchet: "Trebuchet MS", Tahoma, Arial, sans-serif;
+@geneva: Geneva, Tahoma, Arial, sans-serif;
+
+ /*
+  * Parametric Mixins
+  */
+.radius (@radius: 0px) {
+  border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+}
+/**
+ * https://github.com/leafo/lessphp/issues/139
+ */
+.gradient-vertical(@color; @top; @bottom) {
+  /* fallback */
+  background: @color;
+  /* Safari4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, left bottom, left top,
+                color-stop(0, @bottom), color-stop(1, @top));
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(top, @top, @bottom);
+  /* FireFox 3.6+ */
+  background: -moz-linear-gradient(top, @top, @bottom);
+  /* IE 10 */
+  background: -ms-linear-gradient(top, @top, @bottom);
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(top, @top, @bottom);
+  /* IE6,IE7,IE8 and IE9 use background-color */
+}
+
+
+body {
+  background-color: @body_bg_color;
+}
+/*
+ * Branded Gradients
+ ***/
+@highlighted_block_header {
+  color: @highlighted_block_header_txt_color;
+  .gradient-vertical(@highlighted_block_header_bg_color; @highlighted_block_header_gradient_top; @highlighted_block_header_gradient_btm);
+  @highlighted_block_header_overrides;
+}
+
+@branded_button {
+  color: @button_txt_color;
+  .gradient-vertical(@button_bg_color; @button_gradient_top; @button_gradient_btm);
+  @button_overrides;
+}
+
+.pm-pg {
+  width: @site_width;
+}
+.pm-util {
+  background-color: @util_region_bg_color;
+  ul {
+    background-color: @util_links_bg_color;
+    .radius(@util_links_radius);
+    @utility_font;
+    a {
+      color: @util_links_color;
+    }
+  }
+}
+.pm-hd {
+  @header_bg_img;
+  .pm-hd-pdg {
+    height: @header_height;
+  }
+  .menu {
+    @utility_font;
+    a {
+      color: @util_links_color;
+    }
+  }
+  .pm-site-name {
+    @logo_position;
+    width: @logo_width;
+    height: @logo_height;
+    a {
+      @logo_img;
+      padding-top: @logo_height;
+    }
+  }
+  .pm-search {
+    @search_position;
+  }
+  .login-logout {
+    @login_position;
+  }
+}
+/* footer logo
+ ***/
+.footer-subscribe .pane-content a {
+  @footer-logo;
+}
+
+/*
+ * branding buttons
+ ****/
+.more-link a,
+.button-link a,
+.compare-request-info,
+#similar-products-more-link a,
+#featured-products-more-link a,
+.add-to-favorites a,
+.show-contact-info a,
+#datapoints-listing .datapoint-view-all a,
+.company-content-center-js-link a, /* all company, product links */
+.view-button a,
+.apachesolr-showhide,
+.form-submit,
+.cart-block-summary-links li,
+.cart-block-summary-links a,
+.cart-block-summary-links a.active,
+.forum-links li a,
+.forum-links a:visited,
+.forum-links a:active,
+.qmmt_quoteEntryBox_submit,
+.qm_goNav_button,
+.qm-option-goNav-button,
+.qm_news_goButton,
+.qm_historyTab_GoButton {
+  @branded_button;
+}
+
+/*
+ * login/register modal window
+ ***/
+div.ctools-modal-content h2,
+.gatedLogin h2 { color: @button_gradient_btm; }
+
+/*
+ * branding borders
+ ***/
+.group-title,
+.node-type-recipe .social-links-inline,
+.social-links-inline,
+.inline-related-content,
+.section-related-content {
+  border-color: @main_accent_color;
+}
+.breadcrumb {
+  border-color: @main_accent_color;
+}
+.front,
+.not-logged-in.page-user,
+.page-search,
+.node-type-content-source {
+  .pm-sidebar {
+    border-color: @main_accent_color;
+  }
+}
+.js .scroll {
+  border-color: @main_accent_color;
+}
+.pm-ft {
+  border-color: @main_accent_color;
+  background-color: @footer_background_color;
+}
+.pm-ft .menu li a {
+  color: @footer_links_color;
+}
+.pm-content-wrp {
+  border-bottom-color: @main_accent_color;
+}
+.pm-cont-main .pm-carousel .block-title,
+.pm-cont-main .pm-carousel .block-content {
+  border-color: @main_accent_color;
+}
+#block-menu-menu-main-footer-nav {
+  border-color: @color_border_in_footer;
+}
+#block-menu-menu-new-hope-sources {
+  border-color: @color_border_in_footer;
+}
+.view-event-list .field-start-date-value {
+  border-color: @main_accent_color;
+}
+.node-type-webinar h3,
+.enews-title,
+#nl-thanks {
+ color: @main_accent_color;
+}
+
+#user-login h1,
+#user-register h1,
+#user-pass h1,
+#user-profile-form legend,
+#user-register legend,
+.profile-header h1,
+.reg-thank-you h1,
+.reg-thank-you h2,
+.reg-thank-you .verification,
+.pm-subscribe h6 {
+  color: @button_gradient_btm;
+}
+.pm-ft .block-title,
+.pm-ft .pane-title {
+  color: @color_block_header_in_footer;
+}
+
+
+/*
+ * Blocks
+ ***/
+.block-title,
+.pane-title,
+.related-tabs .active {
+  color: @block_header_txt_color;
+  @block_header_overrides;
+}
+.block-highlight {
+  .block-title,
+  .pane-title {
+    @highlighted_block_header;
+  }
+}
+
+/*
+ * Comment Snippets
+ ***/
+.join-discussion-block {
+  .button {
+    a,
+    a:hover {
+      @branded_button;
+    }
+  }
+}
+
+/*
+ * Must Reads
+ ***/
+.must-read {
+  background-image: @must_reads_bg_img;
+  li {
+    background-image: @must_reads_sprite;
+  }
+  .view-footer {
+    background-image: @must_reads_sprite;
+  }
+}
+
+/*
+ * Subscribe Block
+ ***/
+.pm-subscribe{
+  .pm-subscribe-inner {
+    h6 {
+      color: @main_accent_color;
+      a,
+      a:hover {
+        color: @main_accent_color;
+      }
+    }
+  }
+  .field-registration-link-url {
+    a,
+    a:hover {
+      @branded_button;
+    }
+  }
+}
+
+/*
+ * Action Block
+ ***/
+.block-action .block-title {
+  color: @main_accent_color;
+}
+.block-title a,
+.block-title a:hover {
+  color: @main_accent_color;
+}
+
+/*
+ * Polls
+ ***/
+
+.poll .bar .foreground {
+  background-color: @main_accent_color;
+}
+
+
+.pm-carousel .views-field-image {
+  background-image: @default_video_thumb;
+}
+
+/*
+ * Homepage Hero Divider
+ ***/
+ .lp-hero-divider,
+ .hp-hero-divider {
+  background-color: @main_accent_color;
+}
+
+/*
+ * Search Results Top Divider
+ ***/
+ .page-search .pm-top .pm-cont-pdg {
+ border-top: 3px solid @main_accent_color;
+ }
+/*
+ * Forum Comment Form Border
+ ***/
+ #forum-comments .box,
+ .page-messages #privatemsg-new {
+  border-bottom: 4px solid @main_accent_color;
+  border-top: 4px solid @main_accent_color;
+ }
+
+/*galaxy dashboard, create product & create company*/
+.page-resource-network .galaxy-border,
+.tableHeader-processed .galaxy-border {
+  border: 4px solid @main_accent_color;
+  padding: 10px;
+}
+
+/*
+ * Galaxy Misc
+ ***/
+.dashboard-intro .quick-tip h5,
+.galaxy-package-selection h3 {
+  color: @main_accent_color;
+}

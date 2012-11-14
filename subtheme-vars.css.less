@@ -1,0 +1,165 @@
+/*==============================================================================
+======== Edit the variables below to set the branding of the site
+======== This page is divided into the following areas:
+========
+======== Main Site:
+========  - Site Width
+========      The site can either span 100% of the browser or 960px.
+========      This width pertains to the header and footer backgrounds rather
+========      than the content
+========  - Colors
+========      Main accent and header colors
+========  - Blocks
+========      Text color for block titles
+========  - Highlighted Blocks
+========      Gradient and text colors for highlighted blocks
+========  - Buttons
+========      Gradient and text colors for buttons
+========
+======== Header
+========  - Header Height And Background
+========      The height is fixed because the following items are absolute
+========      positioned
+========  - Logo Size, Position And Image Location
+========  - Search Position
+========  - Login Position
+========  - Utility Nav
+========      Background colors can be set to "transparent" if no background is
+========      required
+========
+======== Footer
+========
+======== Image Locations
+========
+=============================================================================*/
+
+
+/*==============================================================================
+======== Main Site:
+==============================================================================*/
+
+/* Site Width */
+@site_width: 100%;
+
+/* Body Treatment */
+@body_bg_color: #fff;
+
+/* Colors */
+@main_accent_color: #b51e53;
+
+/* Blocks */
+@block_header_txt_color: #b51e53;
+@block_header_overrides {
+  /* anything you add here will be attributed to all block headers */
+}
+
+/* Highlighted Blocks */
+@highlighted_block_header_bg_color: #b51e53;
+@highlighted_block_header_gradient_top: #b51e53;
+@highlighted_block_header_gradient_btm: #b51e53;
+@highlighted_block_header_txt_color: #fff;
+@highlighted_block_header_overrides {
+  /* anything you add here will be attributed to highlighted block headers
+   * (tip: adding background-image: none; will remove the gradient)
+   ***/
+  font-size: 20px;
+  line-height: 1.1;
+  font-family: @georgia;
+}
+
+/* Buttons */
+@button_bg_color: #b51e53;
+@button_gradient_top: #b51e53;
+@button_gradient_btm: #b51e53;
+@button_txt_color: #fff;
+@button_overrides {
+  /* anything you add here will be attributed to all buttons */
+}
+
+
+
+
+
+/*==============================================================================
+======== Header:
+==============================================================================*/
+
+/* Header Size And Background */
+@header_height: 132px;
+@header_bg_img { background: url('../images/bg.png') repeat-x left bottom transparent; }
+
+/* Logo Size, Position And Image Location */
+@logo_width: 262px;
+@logo_height: 77px;
+@logo_position {
+  top: 9px;
+  left: 12px;
+}
+@logo_img {
+  background-image: url('../images/logo.png');
+/* remove this line if you need to provide a transparent GIF logo for IE
+  _background-image: url('../images/logo.gif');
+/* */
+}
+
+@footer-logo {
+  background-image: url('/sites/all/themes/pisces_subtheme/images/logo-subscribe.png');
+  _background-image: url('/sites/all/themes/pisces_subtheme/images/logo-subscribe.gif');
+  height: 77px;
+  width: 261px;
+}
+
+/* Search Position */
+@search_position {
+  top: 57px;
+  right: 0px;
+}
+
+/* Login Position */
+@login_position {
+  top: 10px;
+  right: 0;
+}
+
+/* Utility Nav */
+@util_region_bg_color: #666;
+@util_links_bg_color: #58524e;
+@util_links_color: #fff;
+@util_links_radius: 5px;
+@utility_font {
+}
+
+
+/*==============================================================================
+======== Footer:
+==============================================================================*/
+
+@color_border_in_footer: #d5d2ca;
+@color_block_header_in_footer: #fff;
+@footer_background_color: #b3b0a9;
+@footer_links_color: #333;
+
+
+/*==============================================================================
+======== Image Locations:
+==============================================================================*/
+
+/* must-reads */
+@must_reads_sprite: url('../images/sprite-must-reads.png');
+@must_reads_bg_img: url('../images/title_bg.png');
+@default_video_thumb: url('../images/default_video_thumb.gif');
+
+
+/*==============================================================================
+================================================================================
+================================================================================
+================================================================================
+================                                                 ===============
+================          DO NOT EDIT BENEATH THIS LINE          ===============
+================                                                 ===============
+================================================================================
+================================================================================
+================================================================================
+==============================================================================*/
+
+@import "../../pisces_core/css/branding.css.less";
