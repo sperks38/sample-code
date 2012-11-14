@@ -1,0 +1,150 @@
+/* ad styling */
+
+.js .advertisement {
+  display: none;
+}
+.ad-on .advertisement {
+  display: block;
+}
+.js .ad-off {
+  display: none;
+}
+.advertisement {
+  text-align: left;
+  line-height: 1.9;
+  color: #666;
+  margin: 0;
+  font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+}
+.pm-banner-ad .advertisement {
+  display: none;
+}
+.block-pm_doubleclick {
+  text-align: center;
+}
+.adPadding {
+  display: block;
+  text-align: left;
+  margin: 0 auto;
+}
+.pm-sidebar .adPadding {
+  padding: 0; /* sidebar 300 default */
+}
+.pm-sidebar .ad160 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 160px;
+}
+.ad75 .adPadding {
+  width: 75px;
+}
+.ad120 .adPadding {
+  width: 120px;
+}
+.ad125 .adPadding {
+  width: 125px;
+}
+.ad160 .adPadding {
+  width: 160px;
+}
+.ad234 .adPadding {
+  width: 234px;
+}
+.ad240 .adPadding {
+  width: 240px;
+}
+.ad250 .adPadding {
+  width: 250px;
+}
+.pm-banner-ad {
+  padding-bottom:20px;
+  clear: both;
+}
+.pm-banner-ad .ad728 .ad, .pm-banner-ad .ad468 .ad {
+  padding-left: 13px;
+  background: url('advertisement-vert.gif') no-repeat left center; }
+.pm-banner-ad .ad { /* banner 728 default */
+  width: 736px;
+  margin: 0 auto;
+  max-width: 736px;
+}
+.ad468 .ad {
+  width: 476px;
+  margin: 0 auto;
+}
+.ad468 .adsense {
+  width: 468px;
+  margin: 0 auto;
+}
+.pm-banner-ad .adPadding {
+  margin: 0;
+  padding: 3px;
+}
+.pm-banner-ad .ad468 .adPadding, .pm-banner-ad .ad728 .adPadding { border: 1px solid #999; }
+.ad img { display: block; }
+
+/* Styles for use in displaying a Roadblock advertisement */
+.hideVideo #video-player { visibility: hidden; }
+p.close {
+  text-transform: uppercase;
+  background: #333;
+  color: white;
+  margin: 0;
+  padding: 5px 12px;
+  font: 12px arial;
+  text-align: left;
+}
+p.close a {
+  font-weight: bold;
+  color: white;
+}
+p.close a.xButton {
+  border: 1px outset white;
+  width: 1em;
+  font-family: verdana;
+  text-align: center;
+  padding: 0 2px;
+}
+p.close a.xButton:hover {
+  text-decoration: none;
+}
+p.close a.xButton:active {
+  border-style: inset;
+}
+#showCount {
+  text-transform: none;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.introstitialAd {
+  margin: 0 auto;
+  text-align: left;
+  padding: 25px 0;
+}
+.ad640x480 .introstitialAd {
+  width: 640px;
+}
+.ad510x425 .introstitialAd {
+  width: 510px;
+}
+.ad440x400 .introstitialAd {
+  width: 440px;
+}
+.ad336x280 .introstitialAd {
+  width: 336px;
+}
+.ad300x250 .introstitialAd {
+  width: 300px;
+}
+
+#roadblock {
+  background: #fff;
+  position: relative;
+  top: 0;
+  z-index: 3;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  border: solid 1px #444;
+}
